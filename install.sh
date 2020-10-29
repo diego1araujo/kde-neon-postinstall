@@ -22,7 +22,7 @@ echo -e "Install drivers\n"
 sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
-sudo apt -y install software-properties-common apt-transport-https libsdl2-dev curl wget
+sudo apt -y install software-properties-common apt-transport-https libsdl2-dev curl wget openssl
 
 echo -e "Download and install Google Chrome / Replacement for Firefox\n"
 wget -cO google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -34,7 +34,9 @@ sudo apt -y install git
 echo -e "Do not forget to config your git"
 echo -e "git config --global user.name \"Your name\""
 echo -e "git config --global user.email your@email.com"
-echo -e "Also do not forget to generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
+echo -e "git config --global init.defaultBranch main"
+echo -e "git config --global --list"
+echo -e "And also generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
 
 echo -e "Install PHP\n"
 sudo apt -y install php7.4 php7.4-common php7.4-bcmath php7.4-json php7.4-mbstring php7.4-xml php7.4-zip php7.4-curl openssl
