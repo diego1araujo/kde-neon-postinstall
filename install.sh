@@ -11,6 +11,7 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:stebbins/handbrake-releases
 sudo add-apt-repository -y ppa:haraldhv/shotcut
 sudo add-apt-repository -y ppa:git-core/ppa
+sudo add-apt-repository -y ppa:ondrej/php
 
 echo -e "Upgrade system\n"
 sudo pkcon -y refresh
@@ -39,7 +40,7 @@ echo -e "git config --global --list"
 echo -e "And also generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
 
 echo -e "Install PHP\n"
-sudo apt -y install php7.4 php7.4-common php7.4-bcmath php7.4-json php7.4-mbstring php7.4-xml php7.4-zip php7.4-curl openssl
+sudo apt -y install php7.4 php7.4-{common,bcmath,json,mbstring,xml,mysql,zip,curl}
 
 echo -e "Install Composer\n"
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
