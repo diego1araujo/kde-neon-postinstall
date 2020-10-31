@@ -100,6 +100,16 @@ wget -cO virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtua
 sudo dpkg -i virtualbox.deb
 sudo apt -y install -f
 
+echo -e "Install Discord\n"
+wget -cO discord.deb https://discordapp.com/api/download?platform=linux&format=deb
+sudo dpkg -i discord.deb
+sudo apt -y install -f
+
+echo -e "Install Steam\n"
+wget -cO steam.deb http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+sudo dpkg -i steam.deb
+sudo apt -y install -f
+
 echo -e "Install Gnome Disk Utility\n"
 sudo apt -y install gnome-disk-utility
 
