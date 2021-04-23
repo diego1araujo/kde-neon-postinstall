@@ -40,7 +40,7 @@ echo -e "git config --global --list"
 echo -e "And also generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
 
 echo -e "Install PHP\n"
-sudo apt -y install php7.4 php7.4-{common,bcmath,json,mbstring,xml,mysql,zip,curl}
+sudo apt -y install php8.0 php8.0-{common,bcmath,json,mbstring,xml,mysql,zip,curl,opcache,readline,gd}
 
 echo -e "Install Composer\n"
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
