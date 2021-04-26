@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview nodejs npm
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview nodejs npm okular
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
@@ -30,6 +30,12 @@ wget -cO google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stab
 sudo dpkg -i google-chrome.deb
 sudo apt -y install -f
 
+echo -e "Download and install Brave Browser / Replacement for Firefox\n"
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt -y update
+sudo apt -y install brave-browser
+
 echo -e "Install Git\n"
 sudo apt -y install git
 echo -e "Do not forget to config your git"
@@ -39,12 +45,22 @@ echo -e "git config --global init.defaultBranch main"
 echo -e "git config --global --list"
 echo -e "And also generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
 
+echo e- "Install dependencies for PHP\n"
+sudo apt -y install network-manager libnss3-tools jq xsel
+
 echo -e "Install PHP\n"
-sudo apt -y install php8.0 php8.0-{common,bcmath,json,mbstring,xml,mysql,zip,curl,opcache,readline,gd}
+sudo apt -y install php8.0-fpm php8.0-cli php8.0-{common,bcmath,mbstring,xml,mysql,zip,curl,opcache,readline,gd}
+
+echo -e "Install MySQL\n"
+sudo apt -y install mysql-server
 
 echo -e "Install Composer\n"
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+echo -e "Install Laravel Valet\n"
+composer global require genesisweb/valet-linux-plus
+valet install
 
 echo -e "Install Laravel Installer\n"
 composer global require laravel/installer
@@ -53,7 +69,7 @@ echo -e "Install PHP CS Fixer\n"
 composer global require friendsofphp/php-cs-fixer
 
 echo -e "Install Nodejs and NPM\n"
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt -y install nodejs
 
 echo -e "Install Visual Studio Code\n"
@@ -124,6 +140,9 @@ sudo apt -y install neofetch
 
 echo -e "Install Tela Icon Theme\n"
 wget -qO- https://raw.githubusercontent.com/vinceliuice/Tela-icon-theme/master/install.sh | DESTDIR="$HOME/.local/share/icons" sh
+
+echo -e "Install Fluent Icon Theme\n"
+wget -qO- https://raw.githubusercontent.com/vinceliuice/Fluent-icon-theme/master/install.sh | DESTDIR="$HOME/.local/share/icons" sh
 
 echo -e "Install Layan KDE Theme\n"
 mkdir ~/.local/share/themes
