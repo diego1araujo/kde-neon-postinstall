@@ -134,17 +134,11 @@ sudo apt -y install neofetch
 
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
-sudo bash install.sh
-
-echo -e "Install Fluent Icon Theme\n"
-git clone https://github.com/vinceliuice/Fluent-icon-theme.git
-sudo bash install.sh
-
-echo -e "Install Layan GTK Theme\n"
-git clone https://github.com/vinceliuice/Layan-gtk-theme.git
+sudo bash ./Tela-icon-theme/install.sh
 
 echo -e "Install Layan KDE Theme\n"
 git clone https://github.com/vinceliuice/Layan-kde.git
+sudo bash ./Layan-kde/install.sh
 
 echo -e "Clear system cache\n"
 rm -rf ~/.cache/plasm* ~/.cache/ico*
