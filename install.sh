@@ -9,6 +9,7 @@ sudo add-apt-repository -y ppa:jurplel/qview
 sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:stebbins/handbrake-releases
+sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
 sudo add-apt-repository -y ppa:haraldhv/shotcut
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
@@ -56,17 +57,7 @@ sudo apt -y install mysql-server
 
 echo -e "Install Composer\n"
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-echo -e "Install Laravel Valet\n"
-composer global require genesisweb/valet-linux-plus
-valet install
-
-echo -e "Install Laravel Installer\n"
-composer global require laravel/installer
-
-echo -e "Install PHP CS Fixer\n"
-composer global require friendsofphp/php-cs-fixer
+echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 
 echo -e "Install Nodejs and NPM\n"
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -105,6 +96,9 @@ sudo apt -y install spotify-client
 echo -e "Install OBS Studio\n"
 sudo apt -y install ffmpeg obs-studio
 
+echo -e "Install Kdenlive\n"
+sudo apt -y install kdenlive
+
 echo -e "Install Shotcut\n"
 sudo apt -y install shotcut
 
@@ -139,17 +133,18 @@ echo -e "Install Neofetch\n"
 sudo apt -y install neofetch
 
 echo -e "Install Tela Icon Theme\n"
-wget -qO- https://raw.githubusercontent.com/vinceliuice/Tela-icon-theme/master/install.sh | DESTDIR="$HOME/.local/share/icons" sh
+git clone https://github.com/vinceliuice/Tela-icon-theme.git
+sudo bash install.sh
 
 echo -e "Install Fluent Icon Theme\n"
-wget -qO- https://raw.githubusercontent.com/vinceliuice/Fluent-icon-theme/master/install.sh | DESTDIR="$HOME/.local/share/icons" sh
+git clone https://github.com/vinceliuice/Fluent-icon-theme.git
+sudo bash install.sh
+
+echo -e "Install Layan GTK Theme\n"
+git clone https://github.com/vinceliuice/Layan-gtk-theme.git
 
 echo -e "Install Layan KDE Theme\n"
-mkdir ~/.local/share/themes
-cd ~/.local/share/themes
 git clone https://github.com/vinceliuice/Layan-kde.git
-cd Layan-kde
-sudo bash install.sh
 
 echo -e "Clear system cache\n"
 rm -rf ~/.cache/plasm* ~/.cache/ico*
