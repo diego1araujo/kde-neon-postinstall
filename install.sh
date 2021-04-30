@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview nodejs npm okular
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
