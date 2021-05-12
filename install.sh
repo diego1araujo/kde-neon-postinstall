@@ -15,7 +15,7 @@ sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
 
 echo -e "Upgrade system\n"
-sudo pkcon -y refresh
+sudo pkcon refresh
 sudo pkcon -y update
 sudo apt -y update
 sudo apt -y dist-upgrade
@@ -68,6 +68,9 @@ wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add 
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt -y update
 sudo apt -y install code
+
+echo -e "Fix error: VSCode is unable to watch for file changes in this large workspace\n"
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 echo -e "Install Sublime Text 3 / Replacement for KWrite\n"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -131,6 +134,9 @@ sudo apt -y install baobab
 
 echo -e "Install Neofetch\n"
 sudo apt -y install neofetch
+
+echo -e "Install Kvantum Manager\n"
+sudo apt -y install qt5-style-kvantum
 
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
