@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "What's your git name?"
+read git_name
+
+echo "What's your git email?"
+read git_email
+
 echo -e "Remove packages\n"
 sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular
 sudo apt -y autoremove
@@ -30,6 +36,7 @@ echo -e "Download and install Google Chrome / Replacement for Firefox\n"
 wget -cO google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome.deb
 sudo apt -y install -f
+rm -f google-chrome.deb
 
 echo -e "Download and install Brave Browser / Replacement for Firefox\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -39,12 +46,10 @@ sudo apt -y install brave-browser
 
 echo -e "Install Git\n"
 sudo apt -y install git
-echo -e "Do not forget to config your git"
-echo -e "git config --global user.name \"Your name\""
-echo -e "git config --global user.email your@email.com"
-echo -e "git config --global init.defaultBranch main"
-echo -e "git config --global --list"
-echo -e "And also generate an ssh key: ssh-keygen -t rsa -C \"your@email.com\"\n"
+git config --global user.name "$git_name"
+git config --global user.email $git_email
+git config --global init.defaultBranch main
+ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa -C $git_user_email
 
 echo e- "Install dependencies for PHP\n"
 sudo apt -y install network-manager libnss3-tools jq xsel
@@ -58,6 +63,7 @@ sudo apt -y install mysql-server
 echo -e "Install Composer\n"
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 echo -e "Install Nodejs and NPM\n"
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -68,6 +74,9 @@ wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add 
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt -y update
 sudo apt -y install code
+
+echo -e "Install VSCode Extension Settings Sync\n"
+code --install-extension Shan.code-settings-sync
 
 echo -e "Fix error: VSCode is unable to watch for file changes in this large workspace\n"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
@@ -112,16 +121,25 @@ echo -e "Install Virtualbox\n"
 wget -cO virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
 sudo dpkg -i virtualbox.deb
 sudo apt -y install -f
+rm -f virtualbox.deb
 
 echo -e "Install Discord\n"
 wget -cO discord.deb https://discordapp.com/api/download?platform=linux&format=deb
 sudo dpkg -i discord.deb
 sudo apt -y install -f
+rm -f discord.deb
+
+echo -e "Install Zoom\n"
+wget -cO zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
+sudo dpkg -i zoom.deb
+sudo apt -y install -f
+rm -f zoom.deb
 
 echo -e "Install Steam\n"
 wget -cO steam.deb http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
 sudo dpkg -i steam.deb
 sudo apt -y install -f
+rm -f steam.deb
 
 echo -e "Install Gnome Disk Utility\n"
 sudo apt -y install gnome-disk-utility
