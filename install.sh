@@ -159,10 +159,12 @@ sudo apt -y install qt5-style-kvantum
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
 sudo bash ./Tela-icon-theme/install.sh
+rm -rf ./Tela-icon-theme
 
 echo -e "Install Layan KDE Theme\n"
 git clone https://github.com/vinceliuice/Layan-kde.git
 sudo bash ./Layan-kde/install.sh
+rm -rf ./Layan-kde
 
 echo -e "Clear system cache\n"
 rm -rf ~/.cache/plasm* ~/.cache/ico*
