@@ -6,6 +6,8 @@ read git_name
 echo "What's your git email?"
 read git_email
 
+sudo touch ~/.gitconfig ~/.zshrc
+
 echo -e "Remove packages\n"
 sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular
 sudo apt -y autoremove
