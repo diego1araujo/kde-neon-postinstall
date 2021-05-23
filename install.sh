@@ -19,6 +19,7 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:stebbins/handbrake-releases
 sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
 sudo add-apt-repository -y ppa:haraldhv/shotcut
+sudo add-apt-repository -y ppa:kritalime/ppa
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
 
@@ -118,6 +119,9 @@ sudo apt -y install shotcut
 
 echo -e "Install Handbrake\n"
 sudo apt -y install handbrake-gtk handbrake-cli
+
+echo -e "Install Krita\n"
+sudo apt -y install krita
 
 echo -e "Install Virtualbox\n"
 wget -cO virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
