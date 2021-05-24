@@ -18,7 +18,6 @@ sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:stebbins/handbrake-releases
 sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
-sudo add-apt-repository -y ppa:haraldhv/shotcut
 sudo add-apt-repository -y ppa:kritalime/ppa
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
@@ -84,7 +83,7 @@ code --install-extension Shan.code-settings-sync
 echo -e "Fix error: VSCode is unable to watch for file changes in this large workspace\n"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-echo -e "Install Sublime Text 3 / Replacement for KWrite\n"
+echo -e "Install Sublime Text / Replacement for KWrite\n"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt -y update
@@ -99,7 +98,7 @@ sudo apt -y install qview
 echo -e "Install Flameshot / Replacement for Spectacle\n"
 sudo apt -y install flameshot
 
-echo -e "Install ULauncher / Replacement for kRunner\n"
+echo -e "Install ULauncher / Replacement for KRunner\n"
 sudo apt -y install ulauncher
 
 echo -e "Install Spotify\n"
@@ -113,9 +112,6 @@ sudo apt -y install ffmpeg obs-studio
 
 echo -e "Install Kdenlive\n"
 sudo apt -y install kdenlive
-
-echo -e "Install Shotcut\n"
-sudo apt -y install shotcut
 
 echo -e "Install Handbrake\n"
 sudo apt -y install handbrake-gtk handbrake-cli
