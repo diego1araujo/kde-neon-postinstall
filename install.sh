@@ -36,8 +36,7 @@ sudo apt -y install software-properties-common apt-transport-https libsdl2-dev c
 
 echo -e "Download and install Google Chrome / Replacement for Firefox\n"
 wget -cO google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome.deb
-sudo apt -y install -f
+sudo apt -y install ./google-chrome.deb
 rm -f google-chrome.deb
 
 echo -e "Download and install Brave Browser / Replacement for Firefox\n"
@@ -121,26 +120,22 @@ sudo apt -y install krita
 
 echo -e "Install Virtualbox\n"
 wget -cO virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
-sudo dpkg -i virtualbox.deb
-sudo apt -y install -f
+sudo apt -y install ./virtualbox.deb
 rm -f virtualbox.deb
 
 echo -e "Install Discord\n"
 wget -cO discord.deb https://discordapp.com/api/download?platform=linux&format=deb
-sudo dpkg -i discord.deb
-sudo apt -y install -f
+sudo apt -y install ./discord.deb
 rm -f discord.deb
 
 echo -e "Install Zoom\n"
 wget -cO zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
-sudo dpkg -i zoom.deb
-sudo apt -y install -f
+sudo apt -y install ./zoom.deb
 rm -f zoom.deb
 
 echo -e "Install Steam\n"
 wget -cO steam.deb http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
-sudo dpkg -i steam.deb
-sudo apt -y install -f
+sudo apt -y install ./steam.deb
 rm -f steam.deb
 
 echo -e "Install Gnome Disk Utility\n"
