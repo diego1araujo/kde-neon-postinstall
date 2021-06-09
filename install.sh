@@ -155,6 +155,9 @@ sudo apt -y install baobab
 echo -e "Install Neofetch\n"
 sudo apt -y install neofetch
 
+echo -e "Install KDE Partition Manager\n"
+sudo apt -y install partitionmanager
+
 echo -e "Install Kvantum Manager\n"
 sudo apt -y install qt5-style-kvantum
 
