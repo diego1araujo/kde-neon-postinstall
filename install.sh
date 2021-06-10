@@ -119,9 +119,10 @@ echo -e "Install Krita\n"
 sudo apt -y install krita
 
 echo -e "Install Virtualbox\n"
-wget -cO virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
-sudo apt -y install ./virtualbox.deb
-rm -f virtualbox.deb
+wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt -y update
+sudo apt -y install virtualbox-6.1
 
 echo -e "Install Discord\n"
 wget -cO discord.deb https://discordapp.com/api/download?platform=linux&format=deb
