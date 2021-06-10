@@ -41,9 +41,8 @@ rm -f google-chrome.deb
 
 echo -e "Download and install Brave Browser / Replacement for Firefox\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt -y update
-sudo apt -y install brave-browser
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt -y update && sudo apt -y install brave-browser
 
 echo -e "Install Git\n"
 sudo apt -y install git
@@ -73,8 +72,7 @@ sudo apt -y install nodejs
 echo -e "Install Visual Studio Code\n"
 wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt -y update
-sudo apt -y install code
+sudo apt -y update && sudo apt -y install code
 
 echo -e "Install VSCode Extension Settings Sync\n"
 code --install-extension Shan.code-settings-sync
@@ -85,8 +83,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 echo -e "Install Sublime Text / Replacement for KWrite\n"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt -y update
-sudo apt -y install sublime-text
+sudo apt -y update && sudo apt -y install sublime-text
 
 echo -e "Install Docker\n"
 sudo apt -y install docker.io docker-compose
@@ -103,8 +100,7 @@ sudo apt -y install ulauncher
 echo -e "Install Spotify\n"
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt -y update
-sudo apt -y install spotify-client
+sudo apt -y update && sudo apt -y install spotify-client
 
 echo -e "Install OBS Studio\n"
 sudo apt -y install ffmpeg obs-studio
@@ -121,8 +117,7 @@ sudo apt -y install krita
 echo -e "Install Virtualbox\n"
 wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-sudo apt -y update
-sudo apt -y install virtualbox-6.1
+sudo apt -y update && sudo apt -y install virtualbox-6.1
 
 echo -e "Install Discord\n"
 wget -cO discord.deb https://discordapp.com/api/download?platform=linux&format=deb
