@@ -6,10 +6,8 @@ read git_name
 echo "What's your git email?"
 read git_email
 
-sudo touch ~/.gitconfig ~/.zshrc
-
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular plasma-systemmonitor
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
@@ -148,6 +146,9 @@ sudo apt -y install neofetch
 
 echo -e "Install KDE Partition Manager\n"
 sudo apt -y install partitionmanager
+
+echo -e "Install KDE KSysGuard\n"
+sudo apt -y install ksysguard
 
 echo -e "Install Kvantum Manager\n"
 sudo apt -y install qt5-style-kvantum
