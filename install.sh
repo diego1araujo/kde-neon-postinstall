@@ -16,6 +16,7 @@ sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:stebbins/handbrake-releases
 sudo add-apt-repository -y ppa:kdenlive/kdenlive-stable
+sudo add-apt-repository -y ppa:inkscape.dev/stable
 sudo add-apt-repository -y ppa:kritalime/ppa
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
@@ -111,6 +112,9 @@ sudo apt -y install handbrake-gtk handbrake-cli
 
 echo -e "Install Krita\n"
 sudo apt -y install krita
+
+echo -e "Install Inkscape\n"
+sudo apt -y install inkscape
 
 echo -e "Install Virtualbox\n"
 wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
