@@ -65,7 +65,7 @@ echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 source ~/.bashrc
 
 echo -e "Install Nodejs and NPM\n"
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt -y install nodejs
 
 echo -e "Install Visual Studio Code\n"
@@ -156,6 +156,9 @@ sudo apt -y install ksysguard
 
 echo -e "Install Kvantum Manager\n"
 sudo apt -y install qt5-style-kvantum
+
+echo -e "Install Latte\n"
+sudo apt -y install latte-dock
 
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
