@@ -136,6 +136,11 @@ wget -cO steam.deb http://repo.steampowered.com/steam/archive/precise/steam_late
 sudo apt -y install ./steam.deb
 rm -f steam.deb
 
+echo -e "Download and install Mailspring\n"
+wget -cO mailspring.deb https://updates.getmailspring.com/download?platform=linuxDeb
+sudo apt -y install ./mailspring.deb
+rm -f mailspring.deb
+
 echo -e "Install Gnome Disk Utility\n"
 sudo apt -y install gnome-disk-utility
 
