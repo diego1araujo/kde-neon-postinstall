@@ -139,6 +139,7 @@ rm -f steam.deb
 echo -e "Download and install Mailspring\n"
 wget -cO mailspring.deb https://updates.getmailspring.com/download?platform=linuxDeb
 sudo apt -y install ./mailspring.deb
+sudo apt -y install gnome-keyring
 rm -f mailspring.deb
 
 echo -e "Install Gnome Disk Utility\n"
