@@ -55,6 +55,7 @@ sudo apt -y install git
 git config --global user.name "$git_name"
 git config --global user.email $git_email
 git config --global init.defaultBranch main
+git config --global push.autoSetupRemote true
 git config --global --add safe.directory "*"
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa -C $git_email
 
