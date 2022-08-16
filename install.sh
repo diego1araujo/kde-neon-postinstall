@@ -13,7 +13,6 @@ sudo apt -y autoremove
 echo -e "Add PPA's\n"
 sudo add-apt-repository -y ppa:jurplel/qview
 sudo add-apt-repository -y ppa:obsproject/obs-studio
-sudo add-apt-repository -y ppa:stebbins/handbrake-releases
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
 
@@ -96,9 +95,6 @@ sudo apt -y install flameshot
 echo -e "Install OBS Studio\n"
 sudo apt -y install ffmpeg obs-studio
 
-echo -e "Install Handbrake\n"
-sudo apt -y install handbrake-gtk handbrake-cli
-
 echo -e "Install Virtualbox\n"
 wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -158,6 +154,9 @@ flatpak -y --noninteractive install flathub com.discordapp.Discord
 
 echo -e "Install Bitwarden\n"
 flatpak -y --noninteractive install flathub com.bitwarden.desktop
+
+echo -e "Install Handbrake\n"
+flatpak -y --noninteractive install flathub fr.handbrake.ghb
 
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
