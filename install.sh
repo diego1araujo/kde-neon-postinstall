@@ -7,7 +7,7 @@ echo "What's your git email?"
 read git_email
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin kde-spectacle gwenview okular plasma-systemmonitor
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
@@ -137,6 +137,9 @@ flatpak -y --noninteractive install flathub org.inkscape.Inkscape
 echo -e "Install Kdenlive\n"
 flatpak -y --noninteractive install flathub org.kde.kdenlive
 
+echo -e "Install Handbrake\n"
+flatpak -y --noninteractive install flathub fr.handbrake.ghb
+
 echo -e "Install Mailspring\n"
 flatpak -y --noninteractive install flathub com.getmailspring.Mailspring
 
@@ -155,8 +158,8 @@ flatpak -y --noninteractive install flathub com.discordapp.Discord
 echo -e "Install Bitwarden\n"
 flatpak -y --noninteractive install flathub com.bitwarden.desktop
 
-echo -e "Install Handbrake\n"
-flatpak -y --noninteractive install flathub fr.handbrake.ghb
+echo -e "Install Telegram\n"
+flatpak -y --noninteractive install flathub org.telegram.desktop
 
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
