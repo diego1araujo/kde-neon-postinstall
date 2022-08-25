@@ -7,7 +7,7 @@ echo "What's your git email?"
 read git_email
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor
+sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
@@ -94,6 +94,15 @@ sudo apt -y install flameshot
 
 echo -e "Install OBS Studio\n"
 sudo apt -y install ffmpeg obs-studio
+
+echo -e "Install Kdenlive\n"
+sudo apt -y install kdenlive
+
+echo -e "Install Krita\n"
+sudo apt -y install krita
+
+echo -e "Install Inkscape\n"
+sudo apt -y install inkscape
 
 echo -e "Install Virtualbox\n"
 wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
