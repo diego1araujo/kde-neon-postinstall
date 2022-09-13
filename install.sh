@@ -121,9 +121,6 @@ sudo apt -y install baobab
 echo -e "Install Neofetch\n"
 sudo apt -y install neofetch
 
-echo -e "Install KDE Partition Manager\n"
-sudo apt -y install partitionmanager
-
 echo -e "Install KDE KSysGuard\n"
 sudo apt -y install ksysguard
 
@@ -182,7 +179,6 @@ rm -rf ./Layan-kde
 
 echo -e "Clear system cache\n"
 rm -rf ~/.cache/plasm* ~/.cache/ico*
-flatpak update
 sudo apt -y clean
 sudo apt -y autoclean
 sudo apt -y autoremove
