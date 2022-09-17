@@ -129,10 +129,6 @@ sudo apt -y install qt5-style-kvantum
 
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak update
-
-echo -e "Install Flatseal\n"
-flatpak -y --noninteractive install flathub com.github.tchx84.Flatseal
 
 echo -e "Install Krita\n"
 flatpak -y --noninteractive install flathub org.kde.krita
