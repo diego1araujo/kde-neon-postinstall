@@ -167,6 +167,12 @@ flatpak -y --noninteractive install flathub com.bitwarden.desktop
 echo -e "Install Telegram\n"
 flatpak -y --noninteractive install flathub org.telegram.desktop
 
+echo -e "Install Maps\n"
+flatpak -y --noninteractive install flathub org.gnome.Maps
+
+echo -e "Install Simplenote\n"
+flatpak -y --noninteractive install flathub com.simplenote.Simplenote
+
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
 bash ./Tela-icon-theme/install.sh
