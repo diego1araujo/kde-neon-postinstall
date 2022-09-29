@@ -169,6 +169,9 @@ flatpak -y --noninteractive install flathub org.gnome.Maps
 echo -e "Install Simplenote\n"
 flatpak -y --noninteractive install flathub com.simplenote.Simplenote
 
+echo -e "Install Gnome Calculator\n"
+flatpak -y --noninteractive install org.gnome.Calculator
+
 echo -e "Install Tela Icon Theme\n"
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
 bash ./Tela-icon-theme/install.sh
