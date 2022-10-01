@@ -22,8 +22,8 @@ sudo pkcon -y update
 sudo apt -y update
 sudo apt -y dist-upgrade
 
-echo -e "Install drivers\n"
-sudo ubuntu-drivers install
+# echo -e "Install Nvidia drivers\n"
+# sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
 sudo apt -y install software-properties-common apt-transport-https libsdl2-dev curl wget openssl
