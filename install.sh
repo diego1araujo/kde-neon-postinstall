@@ -104,6 +104,9 @@ sudo apt -y install krita
 echo -e "Install Inkscape\n"
 sudo apt -y install inkscape
 
+echo -e "Install KColorChooser\n"
+sudo apt -y install kcolorchooser
+
 echo -e "Install Virtualbox\n"
 wget -qO - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
 echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -168,6 +171,9 @@ flatpak -y --noninteractive install flathub org.gnome.Maps
 
 echo -e "Install Simplenote\n"
 flatpak -y --noninteractive install flathub com.simplenote.Simplenote
+
+echo -e "Install Sleek\n"
+flatpak -y --noninteractive install flathub com.github.ransome1.sleek
 
 echo -e "Install Gnome Calculator\n"
 flatpak -y --noninteractive install org.gnome.Calculator
