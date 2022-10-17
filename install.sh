@@ -130,6 +130,9 @@ sudo apt -y install ksysguard
 echo -e "Install Kvantum Manager\n"
 sudo apt -y install qt5-style-kvantum
 
+echo -e "Install CPU-X\n"
+sudo apt -y install cpu-x
+
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -174,6 +177,9 @@ flatpak -y --noninteractive install flathub com.simplenote.Simplenote
 
 echo -e "Install Sleek\n"
 flatpak -y --noninteractive install flathub com.github.ransome1.sleek
+
+echo -e "Install Obsidian\n"
+flatpak -y --noninteractive install flathub md.obsidian.Obsidian
 
 echo -e "Install Gnome Calculator\n"
 flatpak -y --noninteractive install org.gnome.Calculator
