@@ -22,6 +22,9 @@ sudo pkcon -y update
 sudo apt -y update
 sudo apt -y dist-upgrade
 
+# Create file to fix packages cache update
+sudo touch /var/lib/man-db/auto-update
+
 # echo -e "Install Nvidia drivers\n"
 # sudo ubuntu-drivers install
 
