@@ -29,7 +29,7 @@ sudo touch /var/lib/man-db/auto-update
 # sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
-sudo apt -y install software-properties-common apt-transport-https libsdl2-dev curl wget openssl
+sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget openssl
 
 echo -e "Download and install Brave Browser\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
