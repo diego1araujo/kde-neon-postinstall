@@ -7,7 +7,7 @@ echo "What's your git email?"
 read git_email
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor
+sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor plasma-welcome
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
