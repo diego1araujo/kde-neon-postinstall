@@ -77,9 +77,6 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 sudo rm -f packages.microsoft.gpg
 sudo apt -y update && sudo apt -y install code
 
-echo -e "Install VSCode Extension Settings Sync\n"
-code --install-extension Shan.code-settings-sync
-
 echo -e "Fix error: VSCode is unable to watch for file changes in this large workspace\n"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
@@ -146,6 +143,9 @@ sudo apt -y install htop
 
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo -e "Install Firefox\n"
+flatpak -y --noninteractive install flathub org.mozilla.firefox
 
 echo -e "Install Krita\n"
 flatpak -y --noninteractive install flathub org.kde.krita
