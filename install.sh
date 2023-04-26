@@ -147,6 +147,12 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo -e "Install Firefox\n"
 flatpak -y --noninteractive install flathub org.mozilla.firefox
 
+echo -e "Install Chromium\n"
+flatpak -y --noninteractive install flathub org.chromium.Chromium
+
+echo -e "Install Beekeeper Studio\n"
+flatpak -y --noninteractive install flathub io.beekeeperstudio.Studio
+
 echo -e "Install Krita\n"
 flatpak -y --noninteractive install flathub org.kde.krita
 
