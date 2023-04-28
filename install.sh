@@ -67,7 +67,7 @@ echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 source ~/.bashrc
 
 echo -e "Install Nodejs and NPM\n"
-curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt -y install nodejs
 
 echo -e "Install Visual Studio Code\n"
