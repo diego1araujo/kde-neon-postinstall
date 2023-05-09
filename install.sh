@@ -144,14 +144,14 @@ sudo apt -y install htop
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+echo -e "Install Haruna Player\n"
+flatpak -y --noninteractive install flathub org.kde.haruna
+
 echo -e "Install Firefox\n"
 flatpak -y --noninteractive install flathub org.mozilla.firefox
 
 echo -e "Install Chromium\n"
 flatpak -y --noninteractive install flathub org.chromium.Chromium
-
-echo -e "Install Beekeeper Studio\n"
-flatpak -y --noninteractive install flathub io.beekeeperstudio.Studio
 
 echo -e "Install Krita\n"
 flatpak -y --noninteractive install flathub org.kde.krita
@@ -188,6 +188,9 @@ flatpak -y --noninteractive install flathub org.telegram.desktop
 
 echo -e "Install Simplenote\n"
 flatpak -y --noninteractive install flathub com.simplenote.Simplenote
+
+echo -e "Install Beekeeper Studio\n"
+flatpak -y --noninteractive install flathub io.beekeeperstudio.Studio
 
 echo -e "Install Sleek\n"
 flatpak -y --noninteractive install flathub com.github.ransome1.sleek
