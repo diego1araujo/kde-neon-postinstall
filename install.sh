@@ -144,6 +144,9 @@ sudo apt -y install htop
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+echo -e "Install Gnome Boxes\n"
+flatpak -y --noninteractive install flathub org.gnome.Boxes
+
 echo -e "Install Haruna Player\n"
 flatpak -y --noninteractive install flathub org.kde.haruna
 
