@@ -204,11 +204,6 @@ flatpak -y --noninteractive install flathub md.obsidian.Obsidian
 echo -e "Install Gnome Calculator\n"
 flatpak -y --noninteractive install org.gnome.Calculator
 
-echo -e "Install Tela Icon Theme\n"
-git clone https://github.com/vinceliuice/Tela-icon-theme.git
-bash ./Tela-icon-theme/install.sh
-rm -rf ./Tela-icon-theme
-
 echo -e "Install Layan KDE Theme\n"
 git clone https://github.com/vinceliuice/Layan-kde.git
 bash ./Layan-kde/install.sh
