@@ -159,6 +159,9 @@ flatpak -y --noninteractive install flathub org.inkscape.Inkscape
 echo -e "Install Kdenlive\n"
 flatpak -y --noninteractive install flathub org.kde.kdenlive
 
+echo -e "Install OBS Studio\n"
+flatpak -y --noninteractive install flathub com.obsproject.Studio
+
 echo -e "Install Handbrake\n"
 flatpak -y --noninteractive install flathub fr.handbrake.ghb
 
