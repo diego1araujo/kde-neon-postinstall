@@ -7,7 +7,7 @@ echo "What's your git email?"
 read git_email
 
 echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor plasma-welcome
+sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor plasma-welcome vlc
 sudo apt -y autoremove
 
 echo -e "Add PPA's\n"
@@ -29,7 +29,7 @@ sudo touch /var/lib/man-db/auto-update
 # sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
-sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg openssl
+sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg openssl gnome-keyring
 
 echo -e "Download and install Brave Browser\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
