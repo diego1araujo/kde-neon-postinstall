@@ -66,6 +66,9 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 source ~/.bashrc
 
+echo -e "Install Bun\n"
+curl -fsSL https://bun.sh/install | bash
+
 echo -e "Install Nodejs and NPM\n"
 curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt -y install nodejs
