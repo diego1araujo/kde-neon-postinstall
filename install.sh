@@ -31,6 +31,12 @@ sudo touch /var/lib/man-db/auto-update
 echo -e "Install packages\n"
 sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg openssl gnome-keyring
 
+echo -e "Install Zsh\n"
+sudo apt -y install zsh
+
+echo -e "Install Zap zsh / Replacement for oh-my-zsh\n"
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+
 echo -e "Download and install Brave Browser\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
