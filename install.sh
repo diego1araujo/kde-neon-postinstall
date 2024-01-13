@@ -210,6 +210,12 @@ flatpak -y --noninteractive install flathub com.github.ransome1.sleek
 echo -e "Install Obsidian\n"
 flatpak -y --noninteractive install flathub md.obsidian.Obsidian
 
+echo -e "Install Antares SQL\n"
+flatpak -y --noninteractive install flathub it.fabiodistasio.AntaresSQL
+
+echo -e "Install Bruno API Client\n"
+flatpak -y --noninteractive install flathub com.usebruno.Bruno
+
 echo -e "Install Gnome Calculator\n"
 flatpak -y --noninteractive install org.gnome.Calculator
 
