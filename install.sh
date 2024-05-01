@@ -15,6 +15,7 @@ sudo add-apt-repository -y ppa:jurplel/qview
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
+sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 
 echo -e "Upgrade system\n"
 sudo pkcon refresh
@@ -131,6 +132,9 @@ sudo apt -y install baobab
 
 echo -e "Install Neofetch\n"
 sudo apt -y install neofetch
+
+echo -e "Install Fastfetch\n"
+sudo apt -y install fastfetch
 
 echo -e "Install KDE KSysGuard\n"
 sudo apt -y install ksysguard
