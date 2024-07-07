@@ -119,6 +119,9 @@ sudo apt -y install krita
 echo -e "Install Inkscape\n"
 sudo apt -y install inkscape
 
+echo -e "Install KDE Partition Manager\n"
+sudo apt -y install partitionmanager
+
 echo -e "Install KColorChooser\n"
 sudo apt -y install kcolorchooser
 
