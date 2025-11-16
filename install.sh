@@ -155,6 +155,9 @@ sudo apt -y install htop
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+echo -e "Install VSCode\n"
+flatpak -y --noninteractive install flathub com.visualstudio.code
+
 echo -e "Install Planify\n"
 flatpak -y --noninteractive install flathub io.github.alainm23.planify
 
