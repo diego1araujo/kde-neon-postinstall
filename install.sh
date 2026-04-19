@@ -64,7 +64,7 @@ echo e- "Install dependencies for PHP\n"
 sudo apt -y install network-manager libnss3-tools jq xsel
 
 echo -e "Install PHP\n"
-sudo apt -y install php8.3-fpm php8.3-cli php8.3-{common,bcmath,mbstring,xml,mysql,zip,curl,opcache,pdo,ctype,tokenizer,fileinfo,sqlite3,redis,intl,gd}
+sudo apt -y install php8.5-fpm php8.5-cli php8.5-{common,bcmath,mbstring,xml,mysql,zip,curl,apcu,pdo,sqlite3,redis,intl,gd}
 
 echo -e "Install MySQL\n"
 sudo apt -y install mysql-server
