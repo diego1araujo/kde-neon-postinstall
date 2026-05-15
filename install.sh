@@ -57,6 +57,7 @@ git config --global user.email $git_email
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
 git config --global core.autocrlf false
+git config --global fetch.prune true
 git config --global --add safe.directory "*"
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa -C $git_email
 
