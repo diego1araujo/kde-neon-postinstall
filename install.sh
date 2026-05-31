@@ -23,7 +23,7 @@ sudo touch /var/lib/man-db/auto-update
 # sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
-sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg openssl gnome-keyring
+sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg gnupg openssl gnome-keyring
 
 echo -e "Install Zsh\n"
 sudo apt -y install zsh
@@ -86,10 +86,10 @@ sudo apt update && sudo apt -y install code
 echo -e "Fix error: VSCode is unable to watch for file changes in this large workspace\n"
 echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-echo -e "Install Sublime Text / Replacement for KWrite\n"
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt -y update && sudo apt -y install sublime-text
+echo -e "Install Sublime Text\n"
+sudo wget -O- https://download.sublimetext.com/sublimehq-pub.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/sublimehq-archive-keyring.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/sublimehq-archive-keyring.gpg] https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update && sudo apt -y install sublime-text
 
 echo -e "Install Docker\n"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
