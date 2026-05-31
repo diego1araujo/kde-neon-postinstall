@@ -6,10 +6,6 @@ read git_name
 echo "What's your git email?"
 read git_email
 
-echo -e "Remove packages\n"
-sudo apt -y purge firefox kwrite kate vim kwalletmanager libkf5wallet-bin gwenview okular plasma-systemmonitor plasma-welcome vlc
-sudo apt -y autoremove
-
 echo -e "Add PPA's\n"
 sudo add-apt-repository -y ppa:jurplel/qview
 sudo add-apt-repository -y ppa:obsproject/obs-studio
@@ -40,15 +36,8 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 
 echo -e "Download and install Brave Browser\n"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt -y update && sudo apt -y install brave-browser
-
-echo -e "Download and install Microsoft Edge\n"
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-sudo rm microsoft.gpg
-sudo apt -y update && sudo apt -y install microsoft-edge-stable
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update && sudo apt -y install brave-browser
 
 echo -e "Download and install Librewolf\n"
 sudo apt update && sudo apt -y install extrepo
