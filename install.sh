@@ -161,6 +161,9 @@ sudo apt -y install cpu-x
 echo -e "Install Htop\n"
 sudo apt -y install htop
 
+echo -e "Install Btop\n"
+sudo apt -y install btop
+
 echo -e "Enable Flatpak\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
