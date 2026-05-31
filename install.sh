@@ -50,6 +50,11 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge sta
 sudo rm microsoft.gpg
 sudo apt -y update && sudo apt -y install microsoft-edge-stable
 
+echo -e "Download and install Librewolf\n"
+sudo apt update && sudo apt -y install extrepo
+sudo extrepo enable librewolf
+sudo apt update && sudo apt -y install librewolf
+
 echo -e "Install Git\n"
 sudo apt -y install git
 git config --global user.name "$git_name"
