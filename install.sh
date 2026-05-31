@@ -14,10 +14,7 @@ sudo add-apt-repository -y ppa:ondrej/php
 sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 
 echo -e "Upgrade system\n"
-sudo pkcon refresh
-sudo pkcon -y update
-sudo apt -y update
-sudo apt -y dist-upgrade
+sudo apt update && sudo apt -y upgrade
 
 # Create file to fix packages cache update
 sudo touch /var/lib/man-db/auto-update
