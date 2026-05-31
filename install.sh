@@ -23,7 +23,7 @@ sudo touch /var/lib/man-db/auto-update
 # sudo ubuntu-drivers install
 
 echo -e "Install packages\n"
-sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg gnupg openssl gnome-keyring
+sudo apt -y install software-properties-common apt-transport-https ca-certificates libsdl2-dev curl wget gpg gnupg openssl gnome-keyring zip unzip
 
 echo -e "Install Zsh\n"
 sudo apt -y install zsh
