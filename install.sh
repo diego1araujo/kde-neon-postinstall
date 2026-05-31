@@ -72,8 +72,8 @@ sudo apt -y install network-manager libnss3-tools jq xsel
 echo -e "Install PHP\n"
 sudo apt -y install php8.5-fpm php8.5-cli php8.5-{common,bcmath,mbstring,xml,mysql,zip,curl,apcu,pdo,sqlite3,redis,intl,gd}
 
-echo -e "Install MySQL\n"
-sudo apt -y install mysql-server
+echo -e "Install MariaDB\n"
+sudo apt -y install mariadb-server
 
 echo -e "Install Composer\n"
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
