@@ -11,7 +11,6 @@ sudo add-apt-repository -y ppa:jurplel/qview
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:ondrej/php
-sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 
 echo -e "Upgrade system\n"
 sudo apt update && sudo apt -y upgrade
@@ -116,6 +115,9 @@ sudo apt -y install inkscape
 
 echo -e "Install KDE Partition Manager\n"
 sudo apt -y install partitionmanager
+
+echo -e "Install GParted\n"
+sudo apt -y install gparted
 
 echo -e "Install KColorChooser\n"
 sudo apt -y install kcolorchooser
