@@ -167,6 +167,9 @@ flatpak -y --noninteractive install flathub org.gnome.Boxes
 echo -e "Install Haruna Player\n"
 flatpak -y --noninteractive install flathub org.kde.haruna
 
+echo -e "Install Showtime\n"
+flatpak -y --noninteractive install flathub org.gnome.Showtime
+
 echo -e "Install Firefox\n"
 flatpak -y --noninteractive install flathub org.mozilla.firefox
 
